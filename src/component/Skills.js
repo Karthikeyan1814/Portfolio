@@ -15,16 +15,21 @@ function Skills(){
         const skill_img=gsap.utils.toArray(".skill-img");
         const skill_details=gsap.utils.toArray(".skdetails");
         
-        const t1=gsap.timeline({
-            scrollTrigger:{
-                trigger:skill_container.current,
-                start:"top-=100 center",
-                end:"+=10",
-                scrub:4.5,
-                
-
-            }
-        });
+        // Check if mobile device
+        const isMobile = window.innerWidth <= 768;
+        
+        // Set initial state for all devices
+        gsap.set(skill_img, { x: 0, rotation: 0 });
+        
+        if (!isMobile) {
+            const t1=gsap.timeline({
+                scrollTrigger:{
+                    trigger:skill_container.current,
+                    start:"top-=100 center",
+                    end:"+=10",
+                    scrub:4.5,
+                }
+            });
         // t1.to(skill_img[0],{x:150,rotation:360,duration:3})
         //     .to(skill_img[1],{x:-150,rotation:360,duration:3},"<")
         //     .to(skill_img[2],{x:0,rotation:360,duration:3},"<")
@@ -40,20 +45,21 @@ function Skills(){
         //     .to(skill_img[12],{x:450,rotation:360,duration:3},"<")
         //     .to(skill_img[13],{x:-450,rotation:360,duration:3},"<");
 
-        t1.to(skill_img[0], { x: "10vw", rotation: 360, duration: 3 })
-      .to(skill_img[1], { x: "-10vw", rotation: 360, duration: 3 }, "<")
-      .to(skill_img[2], { x: "0vw", rotation: 360, duration: 3 }, "<")
-      .to(skill_img[3], { x: "20vw", rotation: 360, duration: 3 }, "<")
-      .to(skill_img[4], { x: "-30vw", rotation: 360, duration: 3 }, "<")
-      .to(skill_img[5], { x: "30vw", rotation: 360, duration: 3 }, "<")
-      .to(skill_img[6], { x: "-20vw", rotation: 360, duration: 3 }, "<")
-      .to(skill_img[7], { x: "10vw", rotation: 360, duration: 3 }, "<")
-      .to(skill_img[8], { x: "-10vw", rotation: 360, duration: 3 }, "<")
-      .to(skill_img[9], { x: "0vw", rotation: 360, duration: 3 }, "<")
-      .to(skill_img[10], { x: "20vw", rotation: 360, duration: 3 }, "<")
-      .to(skill_img[11], { x: "-20vw", rotation: 360, duration: 3 }, "<")
-      .to(skill_img[12], { x: "30vw", rotation: 360, duration: 3 }, "<")
-      .to(skill_img[13], { x: "-30vw", rotation: 360, duration: 3 }, "<");
+            t1.to(skill_img[0], { x: "10vw", rotation: 360, duration: 3 })
+              .to(skill_img[1], { x: "-10vw", rotation: 360, duration: 3 }, "<")
+              .to(skill_img[2], { x: "0vw", rotation: 360, duration: 3 }, "<")
+              .to(skill_img[3], { x: "20vw", rotation: 360, duration: 3 }, "<")
+              .to(skill_img[4], { x: "-30vw", rotation: 360, duration: 3 }, "<")
+              .to(skill_img[5], { x: "30vw", rotation: 360, duration: 3 }, "<")
+              .to(skill_img[6], { x: "-20vw", rotation: 360, duration: 3 }, "<")
+              .to(skill_img[7], { x: "10vw", rotation: 360, duration: 3 }, "<")
+              .to(skill_img[8], { x: "-10vw", rotation: 360, duration: 3 }, "<")
+              .to(skill_img[9], { x: "0vw", rotation: 360, duration: 3 }, "<")
+              .to(skill_img[10], { x: "20vw", rotation: 360, duration: 3 }, "<")
+              .to(skill_img[11], { x: "-20vw", rotation: 360, duration: 3 }, "<")
+              .to(skill_img[12], { x: "30vw", rotation: 360, duration: 3 }, "<")
+              .to(skill_img[13], { x: "-30vw", rotation: 360, duration: 3 }, "<");
+        }
 
               gsap.fromTo(skill_details,{x:-100,opacity:0},{
                 x:0,opacity:1,duration:2,stagger:0.3,
