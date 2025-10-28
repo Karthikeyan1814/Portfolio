@@ -1,0 +1,93 @@
+.content-top{
+    height: 700px;
+    width: 100%;
+    background: conic-gradient(from 45deg at 50% 50%,rgb(93, 1, 56), black);
+    position: relative;
+
+}
+.contact-btn{
+    position: absolute;
+    height: 100px;
+    width: 900px;
+    margin-left: 140px;
+    margin-top: 50px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.contact-btn img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+.funck{
+    transition: all 0.5s ease-in-out;
+}
+.funck:hover{
+    box-shadow: 0 8px 27px rgba(255, 255, 255, 0.466);
+    transform: translateY(-20px);
+}
+.contact-glass {
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+  border-radius: 10px;
+  transition: opacity 0.3s;
+  opacity: 0;
+  color: skyblue;
+}
+
+.contact-btn:hover .contact-glass {
+  opacity: 1;
+  margin-left: 260px;
+  margin-top: 10px;
+}
+
+.down-btn{
+   height: 40px;
+   width: 150px;
+   margin-left: 120px;
+   border-radius: 5px;
+   border: none;
+   background-color: rgb(255, 0, 123);
+   transition: all 0.5s ease-in-out;
+   margin-top: 30px;
+   font-weight: 300;
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+}
+
+.down-btn::before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background-color:orange;
+  color: white;
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+
+.down-btn:hover::before {
+  width: 100%;
+}
+
+.down-btn:hover {
+  color: white;
+}
+.down-btn:hover{
+    box-shadow: 0 8px 27px rgb(255, 255, 255,0.23);
+    transform: translateY(-20px);
+}
+.down-container{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: -100px;
+    left: 750px;
+   
+ }

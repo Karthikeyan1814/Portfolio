@@ -1,0 +1,24 @@
+/* Picture.css - Color Grading for Template Matching */
+.my-img {
+    height: 570px;
+    width: 550px;
+    position: absolute;
+    top: 100px;
+    left: 990px;
+    opacity: 0.9;
+    filter: 
+        drop-shadow(-1px -1px 0 black)
+        drop-shadow(1px -1px 0 black)
+        drop-shadow(-1px 1px 0 black)
+        drop-shadow(1px 1px 0 black)
+        drop-shadow(0 0 0 2px black)
+        drop-shadow(10px 15px 100px rgba(128, 0, 128, 0.5));
+    -webkit-filter: 
+        drop-shadow(-1px -1px 0 black)
+        drop-shadow(1px -1px 0 black)
+        drop-shadow(-1px 1px 0 black)
+        drop-shadow(1px 1px 0 black)
+        drop-shadow(0 0 0 2px black)
+        drop-shadow(0 15px 100px rgba(128, 0, 128, 0.5));
+}
+   

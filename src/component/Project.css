@@ -1,0 +1,182 @@
+.project-top{
+    height: 300px;
+    width: 100%;
+    margin-top: 300px;
+    background: linear-gradient(180deg, rgb(55, 9, 55),rgb(0, 0, 0));
+    color: white;
+
+}
+.project-container{
+    height: 190vh;
+    width:100%;
+    margin-top: 55px;
+    color: white;
+    margin-left: 0px;
+    background-color:rgb(0, 0, 0);
+    position: relative;
+}
+.project-gradient-1{
+            height: 500px;
+            width: 500px;
+            margin-top: -20px;
+            margin-left: 850px;
+            background:radial-gradient( circle  ,rgb(232, 36, 232),transparent 50%);
+            z-index: -1;
+}
+.pro-box1{
+            height: 200px;
+            width: 300px;
+            background-color: rgb(148, 134, 146);
+            border-radius: 10px;
+            position: absolute;
+            top: 180px;
+            left: 990px;
+}
+.pro-box2{
+            height: 200px;
+            width: 300px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            position: absolute;
+            top: 190px;
+            left: 1000px;
+}
+.pro-glass1{
+        position: absolute;
+            top: 220px;
+            left: 550px;
+            height: 150px;
+            width: 500px;
+            background: rgb(255, 255, 255,0.1);
+            backdrop-filter: blur(20px) ;
+           color: white;
+           border-radius: 10px;
+           padding-left: 30px;
+           transition: all 1.0s ease-in-out;
+}
+.project-gradient-2{
+         height: 500px;
+            width: 500px;
+            margin-top: -50px;
+            margin-left: 100px;
+            background:radial-gradient( circle  ,rgb(232, 36, 232),transparent 50%);
+            z-index: -1;
+}
+.pro-box3{
+            height: 200px;
+            width: 300px;
+            background-color: rgb(148, 134, 146);
+            border-radius: 10px;
+            position: absolute;
+            top: 630px;
+            left: 220px;
+}
+.pro-box4{
+            height: 200px;
+            width: 300px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            position: absolute;
+            top: 640px;
+            left: 230px;
+}
+.pro-glass2{
+    position: absolute;
+            top: 670px;
+            left: 500px;
+            height: 150px;
+            width: 550px;
+            background: rgb(255, 255, 255,0.1);
+            backdrop-filter: blur(20px) ;
+           color: white;
+           border-radius: 10px;
+           padding-left: 30px;
+           transition: all 1.0s ease-in-out;
+}
+.pro-glass1:hover{
+    height: 550px;
+    width: 800px;
+    transform: scale(1.2) translate(-300px,-50px);
+    z-index: 1;
+}
+.pro-glass2:hover{
+    height: 530px;
+    width: 800px;
+    transform: scale(1.2) translate(50px,-50px);
+    z-index: 1;
+}
+/* Image stack fills the allocated space inside glass1-hidden */
+.image-stack {
+  position: relative;
+  width: 450px;      /* take full width of the popup */
+  height: 250px;    /* enough height for images */
+  margin-top: 20px;
+  overflow: visible;
+}
+
+/* Individual images inside the stack */
+.image-stack img {
+  position: absolute;
+  top: 40%;              
+  left: 50%;            
+  transform: translate(-50%, -50%);
+  width: 350px;         
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  will-change: transform, opacity, z-index;
+  cursor: pointer;
+}
+
+/* Navigation buttons */
+.stack-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.stack-controls .btn1,
+.stack-controls .btn2 {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  background: linear-gradient(45deg,#ffffff,#ffe816);
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+  margin-top: 230px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.stack-controls .btn1::before,
+.stack-controls .btn2::before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background-color: orange;
+  color: rgb(0, 0, 0);
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+
+.stack-controls .btn1:hover::before,
+.stack-controls .btn2:hover::before {
+  width: 100%;
+}
+
+.stack-controls .btn1:hover,
+.stack-controls .btn2:hover {
+  color: white;
+}
+
+.stack-controls .btn1:hover,
+.stack-controls .btn2:hover {
+  transform: scale(1.1);
+}

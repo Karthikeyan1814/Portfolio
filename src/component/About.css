@@ -1,0 +1,20 @@
+.about-top{
+    height: 200px;
+    width: 100%;
+    margin-top: 0px;
+     background: linear-gradient(360deg, rgb(55, 9, 55),rgb(0, 0, 0)); 
+    color: white;
+}
+.about-container{
+    height: 600px;
+    width: 100%;
+    background: linear-gradient(180deg, rgb(55, 9, 55),rgb(93, 1, 56))
+    
+}
+.about-container p{
+    color: white;
+    width: 75%;
+    margin-left: 150px;
+    padding-top: 30px;
+    letter-spacing: 1px;
+}

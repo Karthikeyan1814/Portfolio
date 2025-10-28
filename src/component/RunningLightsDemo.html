@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Lights Button Effects Demo</title>
+    <link rel="stylesheet" href="RunningLights.css">
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 40px;
+            min-height: 100vh;
+        }
+        
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .demo-section {
+            margin-bottom: 60px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .demo-section h2 {
+            color: #00ffff;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px;
+            text-shadow: 0 0 10px #00ffff;
+        }
+        
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .button-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+        
+        .button-item h3 {
+            color: #ff00ff;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .code-snippet {
+            background: #000;
+            color: #00ff00;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin-top: 10px;
+            overflow-x: auto;
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        /* Animated background particles */
+        .bg-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(0, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .particle:nth-child(2n) {
+            background: rgba(255, 0, 255, 0.6);
+            animation-duration: 8s;
+        }
+        
+        .particle:nth-child(3n) {
+            background: rgba(255, 255, 0, 0.6);
+            animation-duration: 10s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+            50% { transform: translateY(-100px) rotate(180deg); opacity: 1; }
+        }
+        
+        /* GSAP animation classes */
+        .gsap-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .gsap-slide-left {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        
+        .gsap-slide-right {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        
+        .gsap-scale-in {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        
+        .gsap-rotate-in {
+            opacity: 0;
+            transform: rotate(-10deg) scale(0.9);
+        }
+        
+        .typewriter-text {
+            overflow: hidden;
+            border-right: 2px solid #00ffff;
+            white-space: nowrap;
+            animation: blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #00ffff; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <div class="bg-particles" id="bgParticles"></div>
+    
+    <div class="demo-container">
+        <h1 class="title" id="mainTitle">Running Lights Button Effects</h1>
+        
+        <!-- Basic Running Light Border -->
+        <div class="demo-section gsap-fade-in" data-section="1">
+            <h2 class="gsap-slide-left">Basic Running Light Border</h2>
+            <div class="button-grid">
+                <div class="button-item gsap-scale-in">
+                    <button class="running-light-border" data-button="basic">Click Me</button>
+                    <div class="code-snippet typewriter-text" data-code="basic">
+                        class="running-light-border"
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Multi-Directional Running Lights -->
+        <div class="demo-section gsap-fade-in" data-section="2">
+            <h2 class="gsap-slide-right">Multi-Directional Running Lights</h2>
+            <div class="button-grid">
+                <div class="button-item gsap-scale-in">
+                    <button class="multi-directional" data-button="multi">
+                        Multi Light
+                        <div class="light-bottom"></div>
+                        <div class="light-left"></div>
+                    </button>
+                    <div class="code-snippet typewriter-text" data-code="multi">
+                        class="multi-directional"<br>
+                        + light-bottom & light-left divs
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pulsing Running Lights -->
+        <div class="demo-section gsap-fade-in" data-section="3">
+            <h2 class="gsap-slide-left">Pulsing Running Lights</h2>
+            <div class="button-grid">
+                <div class="button-item gsap-scale-in">
+                    <button class="pulsing-running" data-button="pulse">Pulse Light</button>
+                    <div class="code-snippet typewriter-text" data-code="pulse">
+                        class="pulsing-running"
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Neon Running Lights -->
+        <div class="demo-section gsap-fade-in" data-section="4">
+            <h2 class="gsap-slide-right">Neon Running Lights</h2>
+            <div class="button-grid">
+                <div class="button-item gsap-scale-in">
+                    <button class="neon-running" data-button="neon">Neon Light</button>
+                    <div class="code-snippet typewriter-text" data-code="neon">
+                        class="neon-running"
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rainbow Running Lights -->
+        <div class="demo-section gsap-fade-in" data-section="5">
+            <h2 class="gsap-slide-left">Rainbow Running Lights</h2>
+            <div class="button-grid">
+                <div class="button-item gsap-scale-in">
+                    <button class="rainbow-running" data-button="rainbow">
+                        Rainbow Light
+                        <div class="rainbow-light"></div>
+                    </button>
+                    <div class="code-snippet typewriter-text" data-code="rainbow">
+                        class="rainbow-running"<br>
+                        + rainbow-light div
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Glitch Running Lights -->
+        <div class="demo-section gsap-fade-in" data-section="6">
+            <h2 class="gsap-slide-right">Glitch Running Lights</h2>
+            <div class="button-grid">
+                <div class="button-item gsap-scale-in">
+                    <button class="glitch-running" data-button="glitch">Glitch Light</button>
+                    <div class="code-snippet typewriter-text" data-code="glitch">
+                        class="glitch-running"
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Particle Running Lights -->
+        <div class="demo-section gsap-fade-in" data-section="7">
+            <h2 class="gsap-slide-left">Particle Running Lights</h2>
+            <div class="button-grid">
+                <div class="button-item gsap-scale-in">
+                    <button class="particle-running" data-button="particle">
+                        Particle Light
+                        <div class="particle"></div>
+                    </button>
+                    <div class="code-snippet typewriter-text" data-code="particle">
+                        class="particle-running"<br>
+                        + particle div
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave Running Lights -->
+        <div class="demo-section gsap-fade-in" data-section="8">
+            <h2 class="gsap-slide-right">Wave Running Lights</h2>
+            <div class="button-grid">
+                <div class="button-item gsap-scale-in">
+                    <button class="wave-running" data-button="wave">Wave Light</button>
+                    <div class="code-snippet typewriter-text" data-code="wave">
+                        class="wave-running"
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Usage Instructions -->
+        <div class="demo-section gsap-fade-in" data-section="9">
+            <h2 class="gsap-rotate-in">How to Use</h2>
+            <div style="background: #000; padding: 20px; border-radius: 10px; font-family: 'Courier New', monospace;" class="gsap-scale-in">
+                <p><strong>1. Import the CSS file:</strong></p>
+                <div class="code-snippet">import './RunningLights.css'</div>
+                
+                <p><strong>2. Add the class to your button:</strong></p>
+                <div class="code-snippet">&lt;button className="running-light-border"&gt;Your Text&lt;/button&gt;</div>
+                
+                <p><strong>3. For complex effects, add required HTML elements:</strong></p>
+                <div class="code-snippet">
+                    &lt;button className="multi-directional"&gt;<br>
+                    &nbsp;&nbsp;Your Text<br>
+                    &nbsp;&nbsp;&lt;div className="light-bottom"&gt;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&lt;div className="light-left"&gt;&lt;/div&gt;<br>
+                    &lt;/button&gt;
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

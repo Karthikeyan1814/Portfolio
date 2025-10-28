@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(27, 2, 27);
+        }
+        .box{
+            height: 500px;
+            width: 600px;
+            margin-top: 60px;
+            margin-left: 680px;
+            background:radial-gradient( circle  ,rgb(66, 10, 108),transparent 50%);
+            z-index: -1;
+        }
+        .glass-box{
+            position: absolute;
+            top: 280px;
+            left: 400px;
+            height: 150px;
+            width: 500px;
+            background: rgb(255, 255, 255,0.1);
+            backdrop-filter: blur(20px) ;
+           color: white;
+           border-radius: 10px;
+           padding-left: 30px;
+        }
+        .box1{
+            height: 200px;
+            width: 300px;
+            background-color: rgb(12, 1, 12);
+            position: absolute;
+            top: 225px;
+            left: 850px;
+            border-radius: 10px;
+        }
+        .box2{
+            height: 200px;
+            width: 300px;
+            background-color: white;
+            position: absolute;
+            top: 245px;
+            left: 870px;
+            border-radius: 5px;
+        }
+        button{
+            position: relative;
+            height:50px;
+            width: 150px;
+            margin-top: -200px;
+            margin-left: 500px;
+            background-color: white;
+            color: purple;
+            overflow: hidden;
+            z-index: 1;
+            background-position: left;
+            border: none;
+            border-radius: 10px;
+        }
+        button::before{
+            content: "";
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            background-color: purple;
+            color: white;
+            z-index: -1;
+            transition: width 0.5s ease;
+        }
+        button:hover::before{
+            width: 100%;
+        }
+        button:hover{
+            color: white;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="glass-box">
+    <h1>Hii welcome</h1>
+    <p>Here we go....</p>
+</div>
+<button>Click Me ..</button>
+</body>
+</html>
