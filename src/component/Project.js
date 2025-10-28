@@ -127,7 +127,7 @@ function Project() {
             <div className='project-top'>
             </div>
             <div className='project-container'>
-                <h1 style={{ letterSpacing: "3px", fontSize: "45px", color: "yellow", paddingTop: '0px', paddingLeft: "150px" }}>PROJECTS</h1>
+                <h1 className='project-name'>PROJECTS</h1>
                 <div className='project-gradient-1'></div>
                 <div className='pro-box1'></div>
                 <img src={farm} className='pro-box2' alt='not found'></img>
@@ -187,9 +187,9 @@ function Project() {
                 </div>
                 {/* -------------------------- */}
                 <div className='project-gradient-1'></div>
-                <div className='pro-box1' style={{ top: "1100px" }}></div>
-                <img src={book} alt='not found' className='pro-box2' style={{ top: "1110px" }}></img>
-                <div className='pro-glass1' ref={container_glass1_second} style={{ top: "1130px" }}  onMouseEnter={() => { setglass3(true) }} onMouseLeave={() => { setglass3(false) }}>
+                <div className='pro-box1 box-clone' ></div>
+                <img src={book} alt='not found' className='pro-box2 clone-img' ></img>
+                <div className='pro-glass1 box-clone2' ref={container_glass1_second}  onMouseEnter={() => { setglass3(true) }} onMouseLeave={() => { setglass3(false) }}>
                     <h1 style={{ paddingTop: "20px" }}>Book Bank Automation </h1>
                     <p style={{ paddingTop: "10px"  }}>Passport Automation System with Multi-Role Verification Workflow</p>
                     {glass3 && <div className='glass1-hidden' style={{ paddingTop: "20px", color: "orange" }}>

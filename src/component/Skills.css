@@ -27,7 +27,6 @@
     color: white;
     margin-left: 0px;
     background-color:rgb(55, 9, 55);
-  
 }
 
 
@@ -41,8 +40,8 @@
     height: 150px;
     width: 100%;
     margin-left: 10px;
-    /* background-color: red; */
-   background-color: red;
+    background-color: rgb(0, 255, 42);
+  
 }
 .row1{
     position: absolute;
@@ -54,4 +53,38 @@
      position: absolute;
     margin-left: 700px;
     margin-top: 10px;
+}
+.skill-name{
+    letter-spacing: 2px;
+    margin-left: 150px;
+    margin-top: 80px;
+    font-size: 45px;
+    color: yellow;
+}
+
+@media (max-width: 768px) {
+    .skill-name{
+        font-size: 25px;
+        margin-top: 0px;
+        margin-left: 70px;
+    }
+    .skill-block{
+        height: 200px;
+        margin-top: 20px;
+    }
+    .skill-detail{
+        margin-left: 60px;
+        width: 80%;
+    }
+    .skill-img{
+        height: 50px;
+        width: 50px;
+    }
+    .row1,.row2{
+        margin-left:350px;
+    }
+    .skill-row-1{
+        margin-top: 50px;
+    }
+    
 }

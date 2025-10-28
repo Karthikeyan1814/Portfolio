@@ -93,14 +93,7 @@ function About(){
         <div id="about" ref={aboutRef}>
             <div className='about-top'></div>
             <div className='about-container'>
-                <h1 ref={titleRef} style={{ 
-                    letterSpacing: "3px", 
-                    fontSize: "45px", 
-                    color: "yellow", 
-                    paddingTop: '0px', 
-                    paddingLeft: "150px",
-                    textShadow: "0 0 20px yellow"
-                }}>About Me</h1>
+                <h1 ref={titleRef} className='about-title'>About Me</h1>
                 
                 <p ref={el => paragraphsRef.current[0] = el} style={{marginTop:"20px"}}>⚡ Hey there! I'm Karthikeyan M, a passionate Information Technology student (2022–2026) from Mahendra College of Engineering, affiliated with Anna University, Chennai.</p><br></br>
                 <p ref={el => paragraphsRef.current[1] = el}>⚡ I'm all about building smart, scalable, and creative tech solutions. With a strong foundation in Java, Python, and C++, I specialize in Full Stack Web Development using React, Node.js, HTML, CSS, JavaScript, and Vite.</p><br></br>

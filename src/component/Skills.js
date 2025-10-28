@@ -25,20 +25,35 @@ function Skills(){
 
             }
         });
-        t1.to(skill_img[0],{x:150,rotation:360,duration:3})
-            .to(skill_img[1],{x:-150,rotation:360,duration:3},"<")
-            .to(skill_img[2],{x:0,rotation:360,duration:3},"<")
-            .to(skill_img[3],{x:300,rotation:360,duration:3},"<")
-            .to(skill_img[4],{x:-300,rotation:360,duration:3},"<")
-            .to(skill_img[5],{x:450,rotation:360,duration:3},"<")
-            .to(skill_img[6],{x:-450,rotation:360,duration:3},"<")
-            .to(skill_img[7],{x:150,rotation:360,duration:3},"<")
-            .to(skill_img[8],{x:-150,rotation:360,duration:3},"<")
-            .to(skill_img[9],{x:0,rotation:360,duration:3},"<")
-            .to(skill_img[10],{x:300,rotation:360,duration:3},"<")
-            .to(skill_img[11],{x:-300,rotation:360,duration:3},"<")
-            .to(skill_img[12],{x:450,rotation:360,duration:3},"<")
-            .to(skill_img[13],{x:-450,rotation:360,duration:3},"<");
+        // t1.to(skill_img[0],{x:150,rotation:360,duration:3})
+        //     .to(skill_img[1],{x:-150,rotation:360,duration:3},"<")
+        //     .to(skill_img[2],{x:0,rotation:360,duration:3},"<")
+        //     .to(skill_img[3],{x:300,rotation:360,duration:3},"<")
+        //     .to(skill_img[4],{x:-300,rotation:360,duration:3},"<")
+        //     .to(skill_img[5],{x:450,rotation:360,duration:3},"<")
+        //     .to(skill_img[6],{x:-450,rotation:360,duration:3},"<")
+        //     .to(skill_img[7],{x:150,rotation:360,duration:3},"<")
+        //     .to(skill_img[8],{x:-150,rotation:360,duration:3},"<")
+        //     .to(skill_img[9],{x:0,rotation:360,duration:3},"<")
+        //     .to(skill_img[10],{x:300,rotation:360,duration:3},"<")
+        //     .to(skill_img[11],{x:-300,rotation:360,duration:3},"<")
+        //     .to(skill_img[12],{x:450,rotation:360,duration:3},"<")
+        //     .to(skill_img[13],{x:-450,rotation:360,duration:3},"<");
+
+        t1.to(skill_img[0], { x: "10vw", rotation: 360, duration: 3 })
+      .to(skill_img[1], { x: "-10vw", rotation: 360, duration: 3 }, "<")
+      .to(skill_img[2], { x: "0vw", rotation: 360, duration: 3 }, "<")
+      .to(skill_img[3], { x: "20vw", rotation: 360, duration: 3 }, "<")
+      .to(skill_img[4], { x: "-30vw", rotation: 360, duration: 3 }, "<")
+      .to(skill_img[5], { x: "30vw", rotation: 360, duration: 3 }, "<")
+      .to(skill_img[6], { x: "-20vw", rotation: 360, duration: 3 }, "<")
+      .to(skill_img[7], { x: "10vw", rotation: 360, duration: 3 }, "<")
+      .to(skill_img[8], { x: "-10vw", rotation: 360, duration: 3 }, "<")
+      .to(skill_img[9], { x: "0vw", rotation: 360, duration: 3 }, "<")
+      .to(skill_img[10], { x: "20vw", rotation: 360, duration: 3 }, "<")
+      .to(skill_img[11], { x: "-20vw", rotation: 360, duration: 3 }, "<")
+      .to(skill_img[12], { x: "30vw", rotation: 360, duration: 3 }, "<")
+      .to(skill_img[13], { x: "-30vw", rotation: 360, duration: 3 }, "<");
 
               gsap.fromTo(skill_details,{x:-100,opacity:0},{
                 x:0,opacity:1,duration:2,stagger:0.3,
@@ -59,7 +74,7 @@ function Skills(){
 
     return(
             <div id="skills" className='skill-block'>
-                <h1 style={{letterSpacing:"3px",marginLeft:"150px",marginTop:"80px",fontSize:"45px",color:"yellow"}}>SKILLS </h1>
+                <h1 className='skill-name'>SKILLS </h1>
                 <div ref={skill_container} className='skill-container'>
                     <div className='skill-detail'>
                         <p className='skdetails'>💡 “I’m an IT student who loves blending logic and creativity from coding full-stack apps to crafting sleek UI experiences.”</p>

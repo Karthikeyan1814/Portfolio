@@ -78,3 +78,25 @@ html {
     0% { left: -100%; }
     100% { left: 100%; }
 }
+
+@media  (max-width: 768px) {
+    .nav-container{
+        width: 100%; 
+        height: 150px;
+    }
+    .nav-container li{
+        font-size: 8px;
+        margin-right: -10px;
+    }
+    .nav-container ul{
+        gap: 5px;
+        padding-top: 60px;
+    }
+    .logo-web{
+        height: 100px;
+        top: 20px;
+    }
+    .neon-running{
+        height: 20px;
+    }
+}

@@ -9,7 +9,7 @@ function Contact(){
     return(
         <div>
             <div id="contact" className='content-top'>
-                 <h1 style={{ letterSpacing: "3px", fontSize: "45px", color: "yellow", paddingTop: '350px', paddingLeft: "150px" }}>Contact</h1>
+                 <h1 className='contact-title'>Contact</h1>
                  <div className='contact-btn'>
                     <img className='funck' src={emailIcon} style={{background:"transparent"}} alt='not found' onClick={() => window.open('mailto:km3974808@gmail.com')}></img>
                     <img className='funck' onClick={() => window.open('https://github.com/Karthikeyan1814')} src={github} alt='not found' style={{height:"40px",width:'60px',marginTop:'18px',filter:"brightness(0) invert(1)"}}></img>
@@ -17,7 +17,7 @@ function Contact(){
                     <img  src={phone} alt='not found' onMouseEnter={()=>setpassed(true)} onMouseLeave={()=>setpassed(false)}></img>
                     {passed &&<div className='contact-glass'><p style={{color:"skyblue"}}>+91-8825750992</p></div>}
                     <div className='down-container'>
-                        <h1 style={{ letterSpacing: "3px", fontSize: "40px", color: "yellow"}} className='down'>Download Resume</h1>
+                        <h1  className='down'>Download Resume</h1>
                         
                         <button className='down-btn'
                             onClick={() => {

@@ -60,3 +60,30 @@
     letter-spacing: 2px;
     padding-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+    .name1{
+        padding-top: 20px;
+        font-size: 20px;
+    }
+    .dash{
+        font-size: 50px;
+    }
+    .name-container{
+        height: 80px;
+        width: 450px;
+        margin-left: 60px;
+        margin-top: 180px;
+    }
+    .details-container{
+        height: 150px;
+        width: 90%;
+        font-size: 14px;
+        margin-left: 50px;
+        margin-top: 90px;
+    }
+    .details-container p{
+        padding-bottom: 10px;
+    }
+    
+}

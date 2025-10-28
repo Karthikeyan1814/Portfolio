@@ -24,7 +24,7 @@ function Name(){
             <div className="name-container">
             <div><h1 className="dash">|</h1></div>
             <div><h1 className="name1" style={{color:"yellow",letterSpacing:"5px"}}><font color="red">Hello ,</font> I AM KARTHIKEYAN</h1>
-            <h4 className="name1" style={{paddingTop:"0px" ,fontSize:"20px",color:"skyblue",letterSpacing:"3px"}}> Full Stack Devloper And UI & UX Designer</h4></div>
+            <h4 className="name1" style={{paddingTop:"0px" ,fontSize:"15px",color:"skyblue",letterSpacing:"3px"}}> Full Stack Devloper And UI & UX Designer</h4></div>
         </div>
         <div className='details-container'>
             <p className='para'> I am Full-stack developer and UI & UX designer passionate about creating clean and efficient web solutions .</p>

@@ -1,5 +1,5 @@
 import './Picture.css'
-import img1 from './logos/karthi.PNG'
+import img1 from './logos/karthi1.png'
 function Picture() {
   
 

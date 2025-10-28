@@ -6,10 +6,26 @@
     color: white;
 }
 .about-container{
-    height: 600px;
+    height: 650px;
     width: 100%;
     background: linear-gradient(180deg, rgb(55, 9, 55),rgb(93, 1, 56))
     
+}
+.about-title{
+    /* style={{ 
+                    letterSpacing: "3px", 
+                    fontSize: "45px", 
+                    color: "yellow", 
+                    paddingTop: '0px', 
+                    paddingLeft: "150px",
+                    textShadow: "0 0 20px yellow"
+                }} */
+                 letter-spacing: 3px;
+                 font-size: 45px;
+                 color: yellow;
+                 padding-top: 10px;
+                 padding-left: 150px;
+                 text-shadow: 0 0 20px yellow;
 }
 .about-container p{
     color: white;
@@ -17,4 +33,18 @@
     margin-left: 150px;
     padding-top: 30px;
     letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+    .about-top{
+        height: 100px;
+    }
+    .about-container p{
+        margin-left: 60px;
+        width: 80%;
+        
+    }
+    .about-title{
+        font-size: 25px;
+        margin-left: -70px;
+    }
 }

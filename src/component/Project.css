@@ -6,8 +6,16 @@
     color: white;
 
 }
+.project-name{
+  /* style={{ letterSpacing: "3px", fontSize: "45px", color: "yellow", paddingTop: '0px', paddingLeft: "150px" }} */
+  letter-spacing: 3px;
+  font-size: 45px;
+  color: yellow;
+  padding-top: 0px;
+  padding-left: 150px;
+}
 .project-container{
-    height: 190vh;
+    height: 170vh;
     width:100%;
     margin-top: 55px;
     color: white;
@@ -179,4 +187,96 @@
 .stack-controls .btn1:hover,
 .stack-controls .btn2:hover {
   transform: scale(1.1);
+}
+.box-clone2{
+  top: 1130px;
+}
+.box-clone{
+  top: 1090px;
+}
+
+.clone-img{
+  top: 1100px;
+}
+
+@media (max-width: 768px) {
+  .project-top{
+    height: 200px;
+  }
+  .project-name{
+    margin-top: -50px;
+    font-size: 25px;
+    margin-left: -90px;
+  }
+  .project-gradient-1{
+    margin-left: -40px;
+    margin-top:-30px;
+    height: 400px;
+    width: 400px;
+  }
+  .pro-box1{
+    left: 60px;
+    top: 120px;
+    height: 150px;
+    width: 200px;
+  }
+  .pro-box2{
+     left: 70px;
+    top: 130px;
+    height: 150px;
+    width: 200px;
+  }
+  .pro-glass1{
+    left: 200px;
+    top: 140px;
+    height: 100px;
+    padding-bottom: 5px;
+  }
+  .pro-glass1:hover{
+    width: 550px;
+  }
+  .image-stack img{
+    width: 250px;
+    height: 150px;
+  }
+  .image-stack{
+    width: 190px;
+  }
+  .project-gradient-2{
+    margin-left: 400px;
+    margin-top:-30px;
+    height: 400px;
+    width: 400px;
+  }
+  .pro-box3{
+    left: 500px;
+    top: 500px;
+    height: 150px;
+    width: 200px;
+  }
+  .pro-box4{
+     left: 490px;
+    top: 510px;
+    height: 150px;
+    width: 200px;
+  }
+  .pro-glass2{
+     left: 10px;
+    top: 540px;
+    height: 100px;
+    padding-bottom: 5px;
+  }
+    .pro-glass2:hover{
+    width: 600px;
+  }
+  .box-clone{
+    margin-top: 750px;
+  }
+  .box-clone2{
+    top: 900px;
+  }
+  .clone-img{
+    margin-top: 750px;
+  }
+
 }
