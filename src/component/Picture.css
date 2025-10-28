@@ -29,3 +29,10 @@
         margin-top: 20px;
     }
 }
+@media (max-width: 480px) {
+    .my-img{
+        left: 260px;
+        height: 250px;
+        width: 150px;
+    }
+}

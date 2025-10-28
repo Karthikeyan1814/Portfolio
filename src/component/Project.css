@@ -22,6 +22,7 @@
     margin-left: 0px;
     background-color:rgb(0, 0, 0);
     position: relative;
+    
 }
 .project-gradient-1{
             height: 500px;
@@ -202,81 +203,256 @@
 @media (max-width: 768px) {
   .project-top{
     height: 200px;
+    margin-top: 200px;
   }
+  
   .project-name{
-    margin-top: -50px;
-    font-size: 25px;
-    margin-left: -90px;
-  }
-  .project-gradient-1{
-    margin-left: -40px;
-    margin-top:-30px;
-    height: 400px;
-    width: 400px;
-  }
-  .pro-box1{
-    left: 60px;
-    top: 120px;
-    height: 150px;
-    width: 200px;
-  }
-  .pro-box2{
-     left: 70px;
-    top: 130px;
-    height: 150px;
-    width: 200px;
-  }
-  .pro-glass1{
-    left: 200px;
-    top: 140px;
-    height: 100px;
-    padding-bottom: 5px;
-  }
-  .pro-glass1:hover{
-    width: 550px;
-  }
-  .image-stack img{
-    width: 250px;
-    height: 150px;
-  }
-  .image-stack{
-    width: 190px;
-  }
-  .project-gradient-2{
-    margin-left: 400px;
-    margin-top:-30px;
-    height: 400px;
-    width: 400px;
-  }
-  .pro-box3{
-    left: 500px;
-    top: 500px;
-    height: 150px;
-    width: 200px;
-  }
-  .pro-box4{
-     left: 490px;
-    top: 510px;
-    height: 150px;
-    width: 200px;
-  }
-  .pro-glass2{
-     left: 10px;
-    top: 540px;
-    height: 100px;
-    padding-bottom: 5px;
-  }
-    .pro-glass2:hover{
-    width: 600px;
-  }
-  .box-clone{
-    margin-top: 750px;
-  }
-  .box-clone2{
-    top: 900px;
-  }
-  .clone-img{
-    margin-top: 750px;
+    margin-top: -80px;
+    font-size: 28px;
+    text-align: center;
+    padding-left: 0;
+    margin-left: 0;
   }
 
+  .project-container {
+    background: rgb(0, 0, 0);
+    position: relative;
+    padding: 40px 15px 100px 15px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .project-gradient-1,
+  .project-gradient-2 {
+    display: none;
+  }
+
+  /* Create card containers for each project */
+  .pro-box1,
+  .pro-box3,
+  .box-clone {
+    position: static;
+    height: 0;
+    width: 0;
+    margin: 0;
+    visibility: hidden;
+  }
+
+  .pro-box2,
+  .pro-box4,
+  .clone-img {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin: 0;
+  }
+
+  .pro-glass1,
+  .pro-glass2,
+  .box-clone2 {
+    position: static;
+    width: 95%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: auto;
+  }
+
+  .pro-glass1:hover,
+  .pro-glass2:hover {
+    transform: none;
+    width: 95%;
+    max-width: 500px;
+    height: auto;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .image-stack {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    margin-top: 20px;
+  }
+
+  .image-stack img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 180px;
+    object-fit: cover;
+    position: relative;
+    transform: none;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 15px;
+  }
+
+  .stack-controls {
+    margin-top: 15px;
+  }
+
+  .stack-controls .btn1,
+  .stack-controls .btn2 {
+    margin-top: 0;
+    transform: none;
+    padding: 10px 20px;
+  }
+
+  .pro-glass1 h1,
+  .pro-glass2 h1,
+  .box-clone2 h1 {
+    font-size: 22px;
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .pro-glass1 p,
+  .pro-glass2 p,
+  .box-clone2 p {
+    font-size: 14px;
+    padding-top: 8px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 480px) {
+ 
+
+  .project-name {
+    font-size: 20px;
+    text-align: center;
+    padding-left: 0;
+    margin-top: -60px;
+    margin-left: 0;
+  }
+
+  .project-container {
+    background: rgb(0, 0, 0);
+    position: relative;
+    padding: 30px 12px 80px 12px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .project-gradient-1,
+  .project-gradient-2 {
+    display: none;
+  }
+
+  /* Hide shadow boxes on mobile */
+  .pro-box1,
+  .pro-box3,
+  .box-clone {
+    position: static;
+    height: 0;
+    width: 0;
+    margin: 0;
+    visibility: hidden;
+  }
+
+  /* Project images */
+  .pro-box2,
+  .pro-box4,
+  .clone-img {
+    position: static;
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(255, 253, 253, 0.5);
+    margin-left: 40px;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Glass containers for mobile cards */
+  .pro-glass1,
+  .pro-glass2,
+  .box-clone2 {
+    position: static !important;
+    width: 98%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    height: auto;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  .pro-glass1:hover,
+  .pro-glass2:hover {
+    transform: none;
+    width: 98%;
+    max-width: 480px;
+    height: auto;
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.5);
+  }
+
+  .image-stack {
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+    margin-top: 15px;
+  }
+
+  .image-stack img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 160px;
+    object-fit: cover;
+    position: relative;
+    transform: none;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 12px;
+  }
+
+  .stack-controls {
+    margin-top: 12px;
+  }
+
+  .stack-controls .btn1,
+  .stack-controls .btn2 {
+    margin-top: 0;
+    transform: none;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  /* Text sizing for mobile */
+  .pro-glass1 h1,
+  .pro-glass2 h1,
+  .box-clone2 h1 {
+    font-size: 18px;
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .pro-glass1 p,
+  .pro-glass2 p,
+  .box-clone2 p {
+    font-size: 13px;
+    padding-top: 8px;
+    padding-left: 0;
+    line-height: 1.4;
+  }
 }

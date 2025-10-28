@@ -87,3 +87,45 @@
     }
     
 }
+@media (max-width: 480px) {
+    .name-container {
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin-left: 0;
+        margin-top: 130px;
+    }
+
+    .dash {
+        font-size: 120px;
+        font-weight: 100;
+        margin-left: -150px;
+        margin-top: -40px;
+    }
+
+    .name1 {
+        font-size: 16px;
+        letter-spacing: 2px;
+        
+        padding-top: 0px;
+        line-height: 1.4;
+        width: 200px;
+        margin-left: -120px;
+    }
+
+    .details-container {
+        width: 90%;
+        margin: 50px auto;
+        height: auto;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .details-container p {
+        padding-bottom: 8px;
+        letter-spacing: 1px;
+    }
+}
