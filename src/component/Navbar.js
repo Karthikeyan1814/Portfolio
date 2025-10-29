@@ -17,7 +17,7 @@ function Navbar(){
     return(
         <div className='nav-container'>
             <img src={logo} alt='logo' className='logo-web'></img>
-            <h2 style={{marginLeft:"150px",position:"absolute",top:"50px",color:"gray"}} className='dev'>Full Stack Devloper</h2>
+            <h2  className='dev'>Full Stack Devloper</h2>
             <ul typeof='*' >
                 <li className='neon-running' onClick={() => scrollToSection('skills')}>
                     Skills

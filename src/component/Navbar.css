@@ -73,7 +73,13 @@ html {
         0 0 10px #b008b3;
         
 }
-
+.dev{
+    /* style={{marginLeft:"150px",position:"absolute",top:"50px",color:"gray"}} */
+    margin-left: 150px;
+    position: absolute;
+    top:50px ;
+    color: gray;
+}
 @keyframes neon-run {
     0% { left: -100%; }
     100% { left: 100%; }
@@ -119,10 +125,13 @@ html {
         padding: 3px 10px;
     }
 
-    .logo-web {
-        height: 70px;
-        top: 35px;
-        left:80px;
+    .logo-web{
+        height: 100px;
+        top: 2vh;
+        margin-left: 6vw;
+    }
+    .dev{
+        left: -4vw;
     }
 
     .neon-running {
