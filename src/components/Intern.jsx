@@ -19,6 +19,7 @@ export default function Intern() {
             <div className="intern-card">
                 <h1>Trainee (Internship)</h1>
                 <h3>NoviTech R&D Pvt Ltd, Coimbatore</h3>
+                <h3>Feb 2025 - Mar 2025</h3>
                 <ul>
                     <li>Developed a full-stack College Transport Management application using React.js, SpringBoot, and postgresql, featuring automated notifications and responsive design.</li>
                     <li>Assisted in backend development, including API integrations and database optimization for high-traffic applications.</li>
@@ -29,6 +30,7 @@ export default function Intern() {
             <div className="intern-card">
                 <h1>React Development (Internship)</h1>
                 <h3>Techvolt Software Pvt Ltd, Coimbatore</h3>
+                <h3>Jun 2025 - Jul 2025</h3>
                 <ul>
                     <li>Developed a full-stack Passport Automation System using the MERN stack (MongoDB, Express.js, React.js, Node.js) with complete UI/UX integration for seamless user experience.</li>
                     <li>Implemented real-time features including online application tracking, automated status updates, and secure client-server data handling.</li>
@@ -39,6 +41,7 @@ export default function Intern() {
             <div className="intern-card">
                 <h1>Frontend Developement (Internship)</h1>
                 <h3>Gravity Ai x FutureX Pvt Ltd, Coimbatore</h3>
+                <h3>Dec 2025 - Jan 2026</h3>
                 <ul>
                     <li>Developed a full-stack Book Bank Automation System using the MERN stack (MongoDB, Express.js, React.js, Node.js) to manage book inventory, student records, and lending operations efficiently.</li>
                     <li>Implemented features such as online book search, issue/return tracking, automated due-date reminders, and secure role-based authentication.</li>
@@ -49,6 +52,7 @@ export default function Intern() {
             <div className="intern-card">
                 <h1>Java Full-Stack Developement (Internship)</h1>
                 <h3>Besant Technologies,AnnaNagar,Chennai</h3>
+                <h3>Jan 2026 - Apr 2026</h3>
                 <ul>
                     <li>Developed a full-stack Book Bank Automation System using the MERN stack (MongoDB, Express.js, React.js, Node.js) to manage book inventory, student records, and lending operations efficiently.</li>
                     <li>Implemented features such as online book search, issue/return tracking, automated due-date reminders, and secure role-based authentication.</li>
