@@ -1,0 +1,380 @@
+.skill-container {
+    min-height: 100vh;
+    height: max-content;
+    background-color: #1d0b20;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    position: relative;
+    margin-top: 150px;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.skill-ring {
+    height: min(350px, 70vw);
+    width: min(350px, 70vw);
+    max-height: 350px;
+    max-width: 350px;
+    border: 3px solid rgba(204, 0, 255, 0.45);
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 50%;
+    animation: rotate 40s linear infinite;
+}
+#skill-slogo{
+   text-align: center;
+   color: gray;
+   font-family: "Montserrat Alternates", sans-serif;
+   font-weight: 500;
+   font-style: normal;
+   padding: 0 1rem;
+   font-size: small;
+}
+.skill-box ul{
+    margin-left: 20px;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    padding-top: 20px;
+}
+.skill-box li{
+    padding: 3px;
+    border: 0.3px solid gray;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: x-small;
+    color: gray;
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+}
+.skill-box li:hover{
+    scale: 1.1;
+    border: 2px solid rgba(204, 0, 255, 0.45);
+}
+.outer-ring {
+    height: min(400px, 75vw);
+    width: min(400px, 75vw);
+    max-height: 400px;
+    max-width: 400px;
+    border: 3px solid rgba(204, 0, 255, 0.45);
+    z-index: 1;
+}
+.skill-box h1{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.inner-ring {
+    height: min(230px, 45vw);
+    width: min(230px, 45vw);
+    max-height: 230px;
+    max-width: 230px;
+    z-index: 2;
+    border: 2px solid rgba(0, 255, 255, 0.45);
+    animation-direction: reverse;
+}
+
+.skill-center img{
+    height: 70px;
+    width: 70px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.skill-items {
+    color: white;
+    box-shadow: 0 0 15px rgba(204, 0, 255, 0.25);
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: #170217;
+    top: 40%;
+    left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: rotate(calc(360deg / var(--count) * var(--i)))
+           translate(var(--radius))
+           rotate(calc(-360deg / var(--count) * var(--i)));
+    border-radius: 15px;
+    border: 1px solid gray;
+}
+.outer-item {
+    --radius: 210px;
+    --count: 8;
+}
+
+.inner-item {
+    --radius: 107px;
+    --count: 5;
+}
+.skill-center {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: 10;
+}
+
+.skill-center{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: wheat;
+    inset: 0;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.skill-popup {
+    position: absolute;
+    bottom: -40px;
+    padding: 6px 10px;
+    background: rgba(20, 5, 30, 0.9);
+    color: #fff;
+    font-size: 11px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 12px rgba(204, 0, 255, 0.4);
+}
+.skill-items:hover .skill-popup {
+    opacity: 1;
+    transform: scale(1.2);
+}
+.skill-items:hover{
+     box-shadow: 0 0 45px rgba(204, 0, 255, 0.45);
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.skill-items img {
+    height: 30px;
+    width: 30px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.skill-tit{
+    margin-left: clamp(1rem, 8vw, 150px);
+    padding-bottom: 50px;
+    font-size: clamp(1.5rem, 5vw, 50px);
+    color: rgba(255, 0, 251, 0.955);
+      font-family: "Montez", cursive;
+  font-weight: 400;
+  font-style: normal;
+    padding-right: 1rem;
+}
+.skill-ring-wrapper{
+
+    position: absolute;
+    top: 60px;
+    right: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 250px;
+    width: min(400px, 85vw);
+    height: min(400px, 85vw);
+    max-width: 400px;
+}
+.skilldetail{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 720px;
+    min-height: 790px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 28px;
+    position: relative;
+    padding: 0 clamp(1rem, 5vw, 60px);
+    margin-top: 50px;
+    margin-left: 10px;
+}
+.skill-box{
+    min-height: 130px;
+    clip-path: polygon(0 0,
+      85% 0,
+      100% 50%,
+      100% 100%,
+      0 100%
+    );
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+    border: 2px solid;
+    border-image: linear-gradient(to right, rgba(0, 255, 255, 0.45), rgba(204, 0, 255, 0.45)) 1;
+}
+.skill-box:hover{
+    transform: rotateY(-10deg) rotateX(5deg) translateY(-6px);
+}
+.skill-box::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2.5px;
+    width: 0%;
+    background: rgba(255, 0, 251, 0.816);
+    transition: width 0.2s ease-in-out;
+}
+.skill-box:hover::after{
+    width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .skill-container {
+    margin-top: 80px;
+    padding-top: 60px;
+  }
+  .skill-tit {
+    margin-left: 1.5rem;
+  }
+  .skilldetail {
+    max-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    gap: 20px;
+  }
+  .skill-ring-wrapper {
+    margin-top: 150px;
+  }
+  #skill-slogo {
+    margin-top: 100px;
+    padding: 0 1.5rem;
+  }
+}
+
+/* Stack sections vertically */
+@media (max-width: 768px) {
+  .skill-container {
+    margin-top: 60px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  .skill-tit {
+    margin-left: 100px;
+    padding-bottom: 30px;
+    font-size: 6.75rem;
+    
+  }
+  .skill-box h1{
+    font-size: medium;
+  }
+  .skilldetail {
+    grid-template-columns:repeat(1fr ,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 0 1rem;
+    margin-top: 400px;
+    min-height: auto;
+  }
+  .skill-ring-wrapper {
+   
+    position: absolute;
+    top: 10vh;
+    left:15vw;
+    width: min(320px, 80vw);
+    height: min(320px, 80vw);
+  }
+  .outer-ring {
+    height: min(320px, 80vw);
+    width: min(320px, 80vw);
+  }
+  .inner-ring {
+    height: min(180px, 45vw);
+    width: min(180px, 45vw);
+  }
+  .outer-item {
+    --radius: 150px;
+  }
+  .inner-item {
+    --radius: 80px;
+  }
+  #skill-slogo {
+    padding: 0 1rem;
+  }
+  .skill-box{
+    padding-bottom: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .skill-container {
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .skill-tit {
+    margin-left: 3.55rem;
+    font-size: 1.45rem;
+    padding-bottom: 20px;
+  }
+  .skilldetail {
+    gap: 16px;
+    padding: 0 0.75rem;
+  }
+  .skill-ring-wrapper {
+    margin-top: 50px;
+    width: min(280px, 90vw);
+    height: min(280px, 90vw);
+  }
+  .outer-ring,
+  .skill-ring {
+    height: min(280px, 90vw);
+    width: min(280px, 90vw);
+  }
+  .inner-ring {
+    height: min(160px, 50vw);
+    width: min(160px, 50vw);
+  }
+  .outer-item {
+    --radius: 140px;
+  }
+  .inner-item {
+    --radius: 75px;
+  }
+  .skill-items {
+    height: 50px;
+    width: 50px;
+    font-size: 8px;
+  }
+  .skill-items img {
+    height: 22px;
+    width: 22px;
+  }
+  .skill-center,
+  .skill-center img {
+    height: 50px;
+    width: 50px;
+  }
+  #skill-slogo {
+    
+    font-size: 0.9rem;
+  }
+}

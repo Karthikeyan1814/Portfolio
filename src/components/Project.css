@@ -1,0 +1,224 @@
+.project-container {
+  background-color: #1d0b20;
+  min-height: 150vh;
+  text-align: center;
+  padding-top: 80px;
+  padding-left: 0;
+  padding-right: 0;
+  color: white;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* TITLE */
+.section-title {
+  color: white;
+  margin-bottom: 60px;
+  padding: 0 1rem;
+}
+
+/* CARD ROW */
+.project-card-cont {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 40px 1rem;
+  width: 100%;
+  max-width: 100%;
+  margin:  auto;
+  margin-left: 20px;
+  box-sizing: border-box;
+}
+
+.project-card-cont::-webkit-scrollbar {
+  display: none;
+}
+
+.project-card {
+  min-width: 280px;
+  max-width: 320px;
+  width: 280px;
+  height: 480px;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+  flex-shrink: 0;
+}
+.project-card {
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+.project-card.active {
+  transform: scale(1.1);
+  border: 2px solid rgba(0, 255, 255);
+}
+
+.dots {
+  margin-top: 50px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #555;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #ff00ff;
+  transform: scale(1.3);
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-points {
+  border: 1px solid gray;
+  padding: 5px;
+  font-size: small;
+  border-radius: 5px;
+  list-style: circle;
+  max-width: 100%;
+  width: 100%;
+  max-height: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+color: rgb(255, 255, 255);
+    font-optical-sizing: auto;
+ 
+    font-style: normal;
+}
+.project-points::-webkit-scrollbar {
+  width: 6px;
+}
+.project-points::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+.project-card h3 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(247, 3, 247);
+  margin-bottom: 30px;
+}
+.tech-stack {
+  color: rgba(0, 255, 255);
+  margin-top: auto;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: small;
+  padding-top: 12px;
+  font-weight: 300;
+  max-width: 90%;
+  opacity: 0.9;
+}
+
+.project-points {
+  list-style: disc;
+  margin: 10px 0;
+  text-align: left;
+  font-size: small;
+  padding-left: 23px;
+   
+}
+
+.project-points li::marker {
+  color: #00f5ff;
+}
+.section-title h5 {
+  color: blueviolet;
+  margin-bottom: 10px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .project-container {
+    padding-top: 60px;
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+  .section-title {
+    margin-bottom: 40px;
+  }
+  .project-card-cont {
+    padding: 30px 1rem;
+    gap: 24px;
+  }
+  .project-card {
+    min-width: 260px;
+    width: 260px;
+    height: 440px;
+  }
+}
+
+/* Stack / smaller tablet */
+@media (max-width: 768px) {
+  .project-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .section-title {
+    margin-bottom: 30px;
+  }
+  .project-card-cont {
+    padding: 24px 0.75rem;
+    gap: 20px;
+  }
+  .project-card {
+    min-width: 280px;
+    width: 280px;
+    height: 420px;
+  }
+  .project-points {
+    max-height: 240px;
+  }
+  .dots {
+    margin-top: 30px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .project-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .section-title {
+    margin-bottom: 24px;
+  }
+  .section-title h1 {
+    font-size: 1.35rem;
+  }
+  .project-card-cont {
+    padding: 20px 0.5rem;
+    gap: 16px;
+  }
+  .project-card {
+    min-width: 260px;
+    width: 260px;
+    height: 400px;
+    padding: 16px;
+  }
+  .project-card h3 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .project-points {
+    max-height: 200px;
+    font-size: 0.85rem;
+  }
+  .dots {
+    margin-top: 24px;
+  }
+}
