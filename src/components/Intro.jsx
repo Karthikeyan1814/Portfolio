@@ -6,7 +6,7 @@ function Intro(){
     
    const words = [
     "Java Full Stack Developer",
-    "MERN Stack Developer"
+    "Web Designer"
   ];
 
   const [text, setText] = useState("");
